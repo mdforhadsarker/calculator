@@ -1,0 +1,45 @@
+import React, {useState} from 'react'
+import Keyboard from './Keyboard'
+import Screen from './Screen'
+
+export default() => {
+    const [input, setInput] = useState('');
+
+    //Add input
+
+    const addInput = (char) => {
+        let newInput = input;
+        newInput += char;
+        setInput(newInput)
+    }
+    //Clear Input 
+
+    const clearInput = () =>{
+       setInput(['']); 
+    }
+
+    //Calculate
+
+    const calculate = () =>{
+        setInput(evaluate(input))
+    }
+
+    function evaluate(fn) {
+        // eslint-disable-next-line no-new-func
+        return new Function('return ' + fn)();
+      }
+      
+      //console.log( calculate('12/5*9+9.4*2') ); // => 40.4
+
+
+    return (
+        <div className="calc">
+            <div className="calcHeader">Calculator</div>
+                <Screen input={input}/>
+                <Keyboard addInput={addInput} calculate={calculate}/>
+            <div className="clearButton" onClick={clearInput}>
+                Clear
+            </div>
+        </div>
+    )
+}
