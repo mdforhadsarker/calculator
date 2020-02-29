@@ -1,6 +1,6 @@
 body{
   margin: 0px;
-  background-color: blue;
+  background-color: #dedede;
 }
 
 .App{
@@ -80,10 +80,19 @@ body{
   width: max-content;
 
 }
-
+.icon{
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+ 
+ 
+  
+}
 .footer{
   font-family: "Quicksand";
-  color: white;
+  color: black;
   position: absolute;
   bottom: 10px;
   justify-content: center;

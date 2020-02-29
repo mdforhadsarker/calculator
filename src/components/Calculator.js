@@ -27,21 +27,27 @@ export default() => {
                 return; 
             }
         }
-
         newInput = input;
-        newInput += char;
+        newInput += char ;
         setInput(newInput)
-    }
+    };
+
     //Clear Input 
 
     const clearInput = () =>{
-       setInput(['']); 
+       setInput(""); 
     }
 
     //Calculate
 
     const calculate = () =>{
-        setInput(evaluate(input))
+
+        try{
+            setInput(evaluate(input))
+        }catch (e){
+console.log(e);
+        }
+      
     }
 
     function evaluate(fn) {
@@ -49,7 +55,7 @@ export default() => {
         return new Function('return ' + fn)();
       }
       
-      //console.log( calculate('12/5*9+9.4*2') ); // => 40.4
+      //console.log( evaluate('12/5*9+9.4*2') ); // => 40.4
 
 
     return (

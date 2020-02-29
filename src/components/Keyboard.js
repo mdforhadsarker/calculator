@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default ({addInput,calculate}) => {
     return (
         <div numberOfine={1} style={{flex:1,display:"flex", flexDirection:"column"}}>
