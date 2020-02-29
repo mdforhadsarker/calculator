@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import Calculator from './components/Calculator';
+import Footer from './components/Footer';
+
 import './App.css';
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <div className="App">
 
       <Calculator/>
+      <Footer/>
       
     </div>
   );

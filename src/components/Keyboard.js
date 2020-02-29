@@ -29,7 +29,7 @@ export default ({addInput,calculate}) => {
                     <div className="roundButton" onClick={()=> {addInput("6")}}>6</div>
                 </div>
                 <div className="centerme">
-                    <div className="roundButton" onClick={()=> {addInput("*")}}>x</div>
+                    <div className="roundButton" onClick={()=> {addInput("*")}}>*</div>
                 </div>
             </div>
             <div style={{display:"flex",flex:1}}>

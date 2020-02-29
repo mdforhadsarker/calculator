@@ -5,10 +5,30 @@ import Screen from './Screen'
 export default() => {
     const [input, setInput] = useState('');
 
+
+
     //Add input
 
+
     const addInput = (char) => {
-        let newInput = input;
+        var newInput = "";
+
+        if (input.length === 0){
+            if(isNaN(Number(char))){
+                newInput = [...input];
+                newInput += 0 + char ;
+                setInput(newInput)
+                return;
+            
+            }else{
+                newInput = [...input];
+                newInput += char ;
+                setInput(newInput)
+                return; 
+            }
+        }
+
+        newInput = input;
         newInput += char;
         setInput(newInput)
     }
