@@ -10,7 +10,11 @@ function App() {
         Welcome to React App
       </h1>
       <h2>Author: Md Forhad Sarkar</h2>
-      <img style={{width:400}} src={profileImage} alt="profile-image"/>
+      <img 
+        style={{width:400}} 
+        src={profileImage} 
+        alt="profile-image"
+      />
     </div>
   );
 }
